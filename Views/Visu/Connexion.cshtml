@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Connexion";
+}
+ 
+<h1>@ViewBag.signinto.FTranslation</h1>
+<br />
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-6">
+                <div class="card border-dark">
+                    <div class="card-header bg-light border-dark"><h5><strong>@ViewBag.signin.FTranslation</strong></h5></div>
+                    <div class="card-body text-dark">
+                        <form asp-action="ResultConnexion">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label for="string" class="control-label">@ViewBag.userid.FTranslation</label>
+                                <input type="text" class="form-control form-control mb-3" id="userid" name="userid" placeholder="User ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">@ViewBag.mdp.FTranslation</label>
+                                <input type="password" class="form-control form-control mb-3" name="password" id="password" placeholder="Password" required>
+                            </div>
+                            <div class="col-ms-6">
+                                <div class="form-group">
+                                    <input type="submit" value='@ViewBag.login.FTranslation' class="btn btn-primary" />
+                                </div>
+                            </div>
+                           
+                        </form>
+                    </div>
+                </div>
+
+                <br />
+                
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+
+</body>
+
+
+
+
+

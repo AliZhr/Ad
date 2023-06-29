@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "ChoiceOfLayer";
+}
+<h1>Choice of the layer</h1>
+
+
+<br />
+<br />
+ @using (Html.BeginForm("ChoiceOfShift", "Visu", FormMethod.Post))
+                        {
+
+                            <td class="col-md-4"> Layer : </td>
+                            <td class="col-md-4">
+                                @Html.DropDownList("FConfigid", ViewBag.Layers as SelectList, "---Select Layer---", new { onchange = "this.form.submit();" })
+                            </td><br /><br />
+                        }
+                    @if (ViewBag.AfficheBand == 1)
+                    {
+                        @using (Html.BeginForm("ChoiceOfShift", "Visu", FormMethod.Post))
+                        {
+                                <td class="col-md-4"> Section : </td>
+                                <td class="col-md-4">
+                                    @Html.DropDownList("FConfigid", ViewBag.Bands as SelectList, "---Select Section---", new { onchange = "this.form.submit();"})
+                                </td>
+                        }
+                                <br /><br />                           
+                    }
+
+
+
+<br />
+<form asp-action="ListeTagesreport" class="form-inline">
+    <br />
+    <button class="btn btn-dark my-2 my-sm-0" type="submit">
+        <img src="~/arrow_left.ico" alt="" width="26" height="26" />
+        Cancel
+    </button>
+</form>

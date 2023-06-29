@@ -1,0 +1,30 @@
+﻿
+
+
+    <ul class="navbar-nav">
+@if ( @ViewBag.CurrentUserId!=null)
+{
+    <form class="d-flex">
+        <span class="navbar-text">
+            @ViewBag.coas.FTranslation @ViewBag.CurrentUserId !
+      </span>
+      <ul class="navbar-nav px-3">
+          <li class="nav-item text-nowrap">
+            <a class="nav-link" asp-area="" asp-controller="Visu" asp-action="LogOut"> @ViewBag.logout.FTranslation </a>
+          </li>
+      </ul>
+        
+    </form>
+}
+else
+{
+    <li class="nav-item">
+         <a class="btn btn-success" asp-area="" asp-controller="Visu" asp-action="Connexion"> @ViewBag.login.FTranslation </a>
+    </li>
+}
+</ul>
+
+
+
+
+

@@ -1,0 +1,233 @@
+﻿@{
+	ViewData["Title"] = "AddDataRecordAMG";
+}
+
+<h1>Fill this form</h1>
+
+
+<span class="text-black-50">
+	Report's date : @ViewBag.DateSelected
+</span>
+<partial name="_AddDataRecordPartial" />
+
+<br />
+<br />
+
+
+<form asp-action="AddDataRecordAMGPost">
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h2> Production Hall AMG</h2>
+					</div>
+					<div class="col col-lg-2">
+					</div>
+				</div>
+			</div>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-4">
+							#
+						</th>
+						<th class="text-center small">
+							@ViewBag.LayerSelected.FField
+						</th>
+					</tr>
+				</thead>
+				<tbody>					
+					<tr>
+						<th class="text small">
+							Teamleader
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="teamleader" name="teamleader" type="number" step="any" placeholder="" required>
+						</th>	
+					</tr>
+
+					<tr>
+						<th class="text small">
+							Present directly
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="presentdirectly" name="presentdirectly" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Neue MA im Training
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="newmaintraining" name="newmaintraining" type="number" step="any" placeholder="" required>
+					</tr>
+					<tr>
+						<th class="text small">
+							Sondermaßnahmen*
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="specialmeasures" name="specialmeasures" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Andon + Springer
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="andonandspringer" name="andonandspringer" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Trainer / ZNA
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="trainerzna" name="trainerzna" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Vacacation
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="vacation" name="vacation" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Vacacation indirect
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="vacationindirect" name="vacationindirect" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Sick
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="sick" name="sick" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Temporary Workers
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="temporaryworkers" name="temporaryworkers" type="number" step="any" placeholder="Number of teamleaders" required>
+						</th>
+					</tr>					
+				</tbody>
+			</table>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-4">
+							Productivity in 
+						</th>
+						<th class="text-center small">
+							@ViewBag.LayerSelected.FField
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text small">
+							ZNA section A
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="znasectiona" name="znasectiona" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							RA 4.1 sets built
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="RA41setsbuilt" name="RA41setsbuilt" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							Built Valmet sets
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="builtvalmetsets" name="builtvalmetsets" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Built Kecs sets
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="builtkecssets" name="builtkecssets" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							RA 4.0 sets built
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="RA40setsbuilt" name="RA40setsbuilt" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Target cycle time [s]
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="targetcycletime" name="targetcycletime" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							5S Team Discussin
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="dataex" name="dataex" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Shift duration [h]
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="shiftduration" name="shiftduration" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							break [min]
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="break1" name="break1" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							ZQB
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="zqb" name="zqb" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<br />
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="form-group">
+				<input type="submit" value="Submit" class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+
+</form>

@@ -1,0 +1,74 @@
+﻿@{
+	ViewData["Title"] = "Menu";
+}
+	<h1 class="text-center">@ViewBag.homepage.FTranslation</h1>
+
+	<div class="row">
+		<div class="col-md-auto">
+			@if (@ViewBag.CurrentUserId == null)
+			{
+				<div class="card text-center border-dark w-75">
+					<div class="card-body">
+						<h5 class="card-title">@ViewBag.login.FTranslation</h5>
+						<p class="card-text">@ViewBag.login_mess.FTranslation</p>
+						@Html.ActionLink((string) @ViewBag.login.FTranslation, "Connexion", new { }, new { @class = "btn btn-success" })
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6">
+			@if (@ViewBag.CurrentUserId != null)
+			{
+
+				<div class="card text-center border-dark">
+					<div class="card-body">
+						<h5 class="card-title">@ViewBag.Navbar1.FTranslation</h5>
+						@Html.ActionLink((string) @ViewBag.headcount_prod.FTranslation, "ListeTagesreport", new { }, new { @class = "btn btn-success" })
+					</div>
+				</div>
+			}
+		</div>
+		<div class="col-sm-6">
+			@if (@ViewBag.CurrentUserId != null)
+			{
+
+				<div class="card text-center border-dark">
+					<div class="card-body">
+						<h5 class="card-title" >@ViewBag.statusITsys.FTranslation</h5>
+						@Html.ActionLink((string) @ViewBag.see.FTranslation, "ListeTagesreport", new { }, new { @class = "btn btn-success disabled" })
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-sm-6">
+			@if (@ViewBag.CurrentUserId != null)
+			{
+
+				<div class="card text-center border-dark">
+					<div class="card-body">
+						<h5 class="card-title">@ViewBag.efficiency.FTranslation</h5>
+						@Html.ActionLink((string) @ViewBag.see.FTranslation, "ListeTagesreport", new { }, new { @class = "btn btn-success disabled" })
+					</div>
+				</div>
+			}
+		</div>
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+

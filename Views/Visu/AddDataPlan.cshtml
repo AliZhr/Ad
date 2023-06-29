@@ -1,0 +1,303 @@
+﻿@{
+	ViewData["Title"] = "AddDataView";
+}
+
+
+<div class="row justify-content-center">
+	<div class="col-10 column">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col col-lg-2">
+				</div>
+				<div class="col-md-auto">
+					<h2>  </h2>
+				</div>
+				<div class="col col-lg-2">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form asp-action="AddDataPlanPost">
+	<div class="row">
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+								<div class="col-md-auto">
+									<h3> @ViewBag.field1.FTranslation</h3>
+								</div>
+							
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								4.0.1
+							</th>
+							<th class="text-center small col-lg-3">
+								4.0.2
+							</th>
+							<th class="text-center small col-lg-3">
+								4.0.3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLL401" id="MASOLL401" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLL402" id="MASOLL402" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLL403" id="MASOLL403" type="number" step="any" required>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h3> @ViewBag.field4.FTranslation</h3>
+					</div>
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								4.0.1
+							</th>
+							<th class="text-center small col-lg-3">
+								4.0.2
+							</th>
+							<th class="text-center small col-lg-3">
+								4.0.3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECOND401" id="MASOLLSECOND401" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECOND402" id="MASOLLSECOND402" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECOND403" id="MASOLLSECOND403" type="number" step="any" required>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<br />
+	<div class="row">
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+
+								<div class="col-md-auto">
+									<h3>@ViewBag.field2.FTranslation</h3>
+								</div>
+							
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								4.1.1
+							</th>
+							<th class="text-center small col-lg-3">
+								4.1.2
+							</th>
+							<th class="text-center small col-lg-3">
+								4.1.3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLL411" id="MASOLL411" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLL412" id="MASOLL412" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLL413" id="MASOLL413" type="number" step="any" required>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+
+								<div class="col-md-auto">
+									<h3> @ViewBag.field4.FTranslation</h3>
+								</div>
+							
+					
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								4.1.1
+							</th>
+							<th class="text-center small col-lg-3">
+								4.1.2
+							</th>
+							<th class="text-center small col-lg-3">
+								4.1.3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECOND411" id="MASOLLSECOND411" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECOND412" id="MASOLLSECOND412" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECOND413" id="MASOLLSECOND413" type="number" step="any" required>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<br />
+	<div class="row">
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+
+								<div class="col-md-auto">
+									<h3> @ViewBag.field3.FTranslation</h3>
+								</div>
+							
+					
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								AMG 1
+							</th>
+							<th class="text-center small col-lg-3">
+								AMG 2
+							</th>
+							<th class="text-center small col-lg-3">
+								AMG 3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLAMG1" id="MASOLLAMG1" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLAMG2" id="MASOLLAMG2" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLAMG3" id="MASOLLAMG3" type="number" step="any" required>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+
+								<div class="col-md-auto">
+									<h3> @ViewBag.field4.FTranslation</h3>
+								</div>
+							
+					
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								AMG 1
+							</th>
+							<th class="text-center small col-lg-3">
+								AMG 2
+							</th>
+							<th class="text-center small col-lg-3">
+								AMG 3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECONDAMG1" id="MASOLLSECONDAMG1" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECONDAMG2" id="MASOLLSECONDAMG2" type="number" step="any" required>
+							</th>
+							<th class="text-center small">
+								<input class="form-control mr-sm-2" name="MASOLLSECONDAMG3" id="MASOLLSECONDAMG3" type="number" step="any" required>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+    <div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="form-group">
+				<input type="submit" value='@ViewBag.submitbutton.FTranslation' class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+
+
+	
+
+</form>

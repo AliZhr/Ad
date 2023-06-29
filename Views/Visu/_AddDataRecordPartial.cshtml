@@ -1,0 +1,33 @@
+﻿
+
+
+
+@if (@ViewBag.ProductionSelected.FConfigid==4){
+ 
+<br />
+ <span class="text-black-50">
+            Production Hall : @ViewBag.ProductionSelected.FField
+      </span>
+      <br />
+      <span class="text-black-50">
+          Shift selected : @ViewBag.LayerSelected.FField
+      </span>
+
+
+
+}
+else {
+    <br />
+ <span class="text-black-50">
+            Production Hall : @ViewBag.ProductionSelected.FField
+      </span>
+      <br />
+      <span class="text-black-50">
+           Shift selected : @ViewBag.LayerSelected.FField 
+      </span>
+      <br />
+      <span class="text-black-50">
+           Section selected : @ViewBag.SectionSelected.FField 
+      </span>
+
+}

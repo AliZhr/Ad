@@ -1,0 +1,1544 @@
+﻿@{
+	ViewData["Title"] = "EditReportStep2";
+}
+
+
+<form asp-action="EditDataRecord41Post">
+	<div class="row justify-content-center">
+		<div class="col-10 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h2> @*Production @ViewBag.ProductionSelected.FField*@ </h2>
+					</div>
+					<div class="col col-lg-2">
+					</div>
+				</div>
+			</div>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-3">
+							@ViewBag.Shift.FTranslation
+						</th>
+						<th class="text-center small">
+							1
+						</th>
+						<th class="text-center small">
+							2
+						</th>
+						<th class="text-center small">
+							3
+						</th>
+					</tr>
+				</thead>
+			</table>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center col-lg-3 small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text small">
+							@ViewBag.SOLLProd.FTranslation
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit1A[0].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit1C[0].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit2A[0].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit2C[0].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit3A[0].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit3C[0].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+					</tr>
+
+
+
+
+					<tr>
+						<th class="text small">
+							@ViewBag.ISTProd.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit1A[1].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit1C[1].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit2A[1].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit2C[1].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit3A[1].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit3C[1].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center col-lg-3 small">
+							@ViewBag.Sec.FTranslation
+						</th>
+						<th class="text-center small">
+							A
+						</th>
+						<th class="text-center small">
+							C
+						</th>
+						<th class="text-center small">
+							A
+						</th>
+						<th class="text-center small">
+							C
+						</th>
+						<th class="text-center small">
+							A
+						</th>
+						<th class="text-center small">
+							C
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.TL.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER1A" name="TEAMLEADER1A" type="number" value='@ViewBag.dataToEdit1A[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER1A" name="TEAMLEADER1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER1C" name="TEAMLEADER1C" type="number" value='@ViewBag.dataToEdit1C[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER1C" name="TEAMLEADER1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER2A" name="TEAMLEADER2A" type="number" value='@ViewBag.dataToEdit2A[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER2A" name="TEAMLEADER2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER2C" name="TEAMLEADER2C" type="number" value='@ViewBag.dataToEdit2C[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER2C" name="TEAMLEADER2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER3A" name="TEAMLEADER3A" type="number" value='@ViewBag.dataToEdit3A[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER3A" name="TEAMLEADER3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER3C" name="TEAMLEADER3C" type="number" value='@ViewBag.dataToEdit3C[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMLEADER3C" name="TEAMLEADER3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+
+
+
+					<tr>
+						<th class="text small">
+							@ViewBag.PD.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT1A" name="PRESENTDIRECT1A" type="number" value='@ViewBag.dataToEdit1A[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT1A" name="PRESENTDIRECT1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT1C" name="PRESENTDIRECT1C" type="number" value='@ViewBag.dataToEdit1C[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT1C" name="PRESENTDIRECT1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT2A" name="PRESENTDIRECT2A" type="number" value='@ViewBag.dataToEdit2A[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT2A" name="PRESENTDIRECT2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT2C" name="PRESENTDIRECT2C" type="number" value='@ViewBag.dataToEdit2C[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT2C" name="PRESENTDIRECT2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT3A" name="PRESENTDIRECT3A" type="number" value='@ViewBag.dataToEdit3A[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT3A" name="PRESENTDIRECT3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT3C" name="PRESENTDIRECT3C" type="number" value='@ViewBag.dataToEdit3C[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="PRESENTDIRECT3C" name="PRESENTDIRECT3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.NewMA.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="NEWMA1A" name="NEWMA1A" type="number" value='@ViewBag.dataToEdit1A[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="NEWMA1A" name="NEWMA1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="NEWMA1C" name="NEWMA1C" type="number" value='@ViewBag.dataToEdit1C[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="NEWMA1C" name="NEWMA1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="NEWMA2A" name="NEWMA2A" type="number" value='@ViewBag.dataToEdit2A[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="NEWMA2A" name="NEWMA2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="NEWMA2C" name="NEWMA2C" type="number" value='@ViewBag.dataToEdit2C[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="NEWMA2C" name="NEWMA2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="NEWMA3A" name="NEWMA3A" type="number" value='@ViewBag.dataToEdit3A[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="NEWMA3A" name="NEWMA3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="NEWMA3C" name="NEWMA3C" type="number" value='@ViewBag.dataToEdit3C[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="NEWMA3C" name="NEWMA3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.SpeMeas.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS1A" name="SPEMEAS1A" type="number" value='@ViewBag.dataToEdit1A[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS1A" name="SPEMEAS1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS1C" name="SPEMEAS1C" type="number" value='@ViewBag.dataToEdit1C[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS1C" name="SPEMEAS1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS2A" name="SPEMEAS2A" type="number" value='@ViewBag.dataToEdit2A[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS2A" name="SPEMEAS2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS2C" name="SPEMEAS2C" type="number" value='@ViewBag.dataToEdit2C[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS2C" name="SPEMEAS2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS3A" name="SPEMEAS3A" type="number" value='@ViewBag.dataToEdit3A[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS3A" name="SPEMEAS3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS3C" name="SPEMEAS3C" type="number" value='@ViewBag.dataToEdit3C[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SPEMEAS3C" name="SPEMEAS3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.AS.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI1A" name="ANDSPRI1A" type="number" value='@ViewBag.dataToEdit1A[6].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI1A" name="ANDSPRI1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI1C" name="ANDSPRI1C" type="number" value='@ViewBag.dataToEdit1C[6].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI1C" name="ANDSPRI1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI2A" name="ANDSPRI2A" type="number" value='@ViewBag.dataToEdit2A[6].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI2A" name="ANDSPRI2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI2C" name="ANDSPRI2C" type="number" value='@ViewBag.dataToEdit2C[6].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI2C" name="ANDSPRI2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI3A" name="ANDSPRI3A" type="number" value='@ViewBag.dataToEdit3A[6].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI3A" name="ANDSPRI3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI3C" name="ANDSPRI3C" type="number" value='@ViewBag.dataToEdit3C[6].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ANDSPRI3C" name="ANDSPRI3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.TrainerZNA.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TRAIN1A" name="TRAIN1A" type="number" value='@ViewBag.dataToEdit1A[7].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TRAIN1A" name="TRAIN1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TRAIN1C" name="TRAIN1C" type="number" value='@ViewBag.dataToEdit1C[7].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TRAIN1C" name="TRAIN1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TRAIN2A" name="TRAIN2A" type="number" value='@ViewBag.dataToEdit2A[7].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TRAIN2A" name="TRAIN2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TRAIN2C" name="TRAIN2C" type="number" value='@ViewBag.dataToEdit2C[7].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TRAIN2C" name="TRAIN2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TRAIN3A" name="TRAIN3A" type="number" value='@ViewBag.dataToEdit3A[7].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TRAIN3A" name="TRAIN3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TRAIN3C" name="TRAIN3C" type="number" value='@ViewBag.dataToEdit3C[7].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TRAIN3C" name="TRAIN3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.Vac.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA1A" name="VACA1A" type="number" value='@ViewBag.dataToEdit1A[8].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA1A" name="VACA1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA1C" name="VACA1C" type="number" value='@ViewBag.dataToEdit1C[8].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA1C" name="VACA1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA2A" name="VACA2A" type="number" value='@ViewBag.dataToEdit2A[8].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA2A" name="VACA2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA2C" name="VACA2C" type="number" value='@ViewBag.dataToEdit2C[8].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA2C" name="VACA2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA3A" name="VACA3A" type="number" value='@ViewBag.dataToEdit3A[8].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA3A" name="VACA3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA3C" name="VACA3C" type="number" value='@ViewBag.dataToEdit3C[8].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA3C" name="VACA3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.VacIND.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA1AIND" name="VACA1AIND" type="number" value='@ViewBag.dataToEdit1A[9].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA1AIND" name="VACA1AIND" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA1CIND" name="VACA1CIND" type="number" value='@ViewBag.dataToEdit1C[9].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA1CIND" name="VACA1CIND" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA2AIND" name="VACA2AIND" type="number" value='@ViewBag.dataToEdit2A[9].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA2AIND" name="VACA2AIND" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA2CIND" name="VACA2CIND" type="number" value='@ViewBag.dataToEdit2C[9].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA2CIND" name="VACA2CIND" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA3AIND" name="VACA3AIND" type="number" value='@ViewBag.dataToEdit3A[9].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA3AIND" name="VACA3AIND" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VACA3CIND" name="VACA3CIND" type="number" value='@ViewBag.dataToEdit3C[9].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VACA3CIND" name="VACA3CIND" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.Sick.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="" name="SICK1A" type="number" value='@ViewBag.dataToEdit1A[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SICK1A" name="SICK1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SICK1C" name="SICK1C" type="number" value='@ViewBag.dataToEdit1C[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SICK1C" name="SICK1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SICK2A" name="SICK2A" type="number" value='@ViewBag.dataToEdit2A[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SICK2A" name="SICK2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SICK2C" name="SICK2C" type="number" value='@ViewBag.dataToEdit2C[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SICK2C" name="SICK2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SICK3A" name="SICK3A" type="number" value='@ViewBag.dataToEdit3A[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SICK3A" name="SICK3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SICK3C" name="SICK3C" type="number" value='@ViewBag.dataToEdit3C[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SICK3C" name="SICK3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.TempW.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEMP1A" name="TEMP1A" type="number" value='@ViewBag.dataToEdit1A[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEMP1A" name="TEMP1A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEMP1C" name="TEMP1C" type="number" value='@ViewBag.dataToEdit1C[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEMP1C" name="TEMP1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEMP2A" name="TEMP2A" type="number" value='@ViewBag.dataToEdit2A[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEMP2A" name="TEMP2A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEMP2C" name="TEMP2C" type="number" value='@ViewBag.dataToEdit2C[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEMP2C" name="TEMP2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEMP3A" name="TEMP3A" type="number" value='@ViewBag.dataToEdit3A[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEMP3A" name="TEMP3A" type="number" value="" step="any">
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEMP3C" name="TEMP3C" type="number" value='@ViewBag.dataToEdit3C[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEMP3C" name="TEMP3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.SumPerSec.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit1A[12].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit1C[12].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit2A[12].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit2C[12].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3A.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit3A[12].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3C.Count != 0))
+							{
+								<input class="form-control mr-sm-2" type="number" value='@ViewBag.dataToEdit3C[12].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" type="number" value="" step="any" readonly>
+							}
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-4">
+							@ViewBag.Prod90.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							1
+						</th>
+						<th class="text-center small" colspan="2">
+							2
+						</th>
+						<th class="text-center small" colspan="2">
+							3
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text small">
+							@ViewBag.ZNASecA.FTranslation
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SECTION1A" name="SECTION1A" type="number" value='@ViewBag.dataToEdit1NONE[0].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SECTION1A" name="SECTION1A" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SECTION2A" name="SECTION2A" type="number" value='@ViewBag.dataToEdit2NONE[0].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SECTION2A" name="SECTION2A" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SECTION3A" name="SECTION3A" type="number" value='@ViewBag.dataToEdit3NONE[0].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SECTION3A" name="SECTION3A" type="number" value="" step="any">
+							}
+						</th>
+
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.ZNASecC.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SECTION1C" name="SECTION1C" type="number" value='@ViewBag.dataToEdit1NONE[1].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SECTION1C" name="SECTION1C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SECTION2C" name="SECTION2C" type="number" value='@ViewBag.dataToEdit2NONE[1].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SECTION2C" name="SECTION2C" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SECTION3C" name="SECTION3C" type="number" value='@ViewBag.dataToEdit3NONE[1].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SECTION3C" name="SECTION3C" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.SKD.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SKD1" name="SKD1" type="number" value='@ViewBag.dataToEdit1NONE[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SKD1" name="SKD1" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SKD2" name="SKD2" type="number" value='@ViewBag.dataToEdit2NONE[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SKD2" name="SKD2" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SKD3" name="SKD3" type="number" value='@ViewBag.dataToEdit3NONE[2].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SKD3" name="SKD3" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+
+
+					<tr>
+						<th class="text small">
+							@ViewBag.Valmet.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VAL1" name="VAL1" type="number" value='@ViewBag.dataToEdit1NONE[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VAL1" name="VAL1" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VAL2" name="VAL2" type="number" value='@ViewBag.dataToEdit2NONE[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VAL2" name="VAL2" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="VAL3" name="VAL3" type="number" value='@ViewBag.dataToEdit3NONE[3].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="VAL3" name="VAL3" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+
+
+
+					<tr>
+						<th class="text small">
+							@ViewBag.Sindel.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SIN1" name="SIN1" type="number" value='@ViewBag.dataToEdit1NONE[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SIN1" name="SIN1" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SIN2" name="SIN2" type="number" value='@ViewBag.dataToEdit2NONE[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SIN2" name="SIN2" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SIN3" name="SIN3" type="number" value='@ViewBag.dataToEdit3NONE[4].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SIN3" name="SIN3" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+
+
+
+					<tr>
+						<th class="text small">
+							@ViewBag.Rastatt.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="RAS1" name="RAS1" type="number" value='@ViewBag.dataToEdit1NONE[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="RAS1" name="RAS1" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="RAS2" name="RAS2" type="number" value='@ViewBag.dataToEdit2NONE[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="RAS2" name="RAS2" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="RAS3" name="RAS3" type="number" value='@ViewBag.dataToEdit3NONE[5].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="RAS3" name="RAS3" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.TotSets.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="1TOTSETS" name="1TOTSETS" type="number" value='@ViewBag.dataToEdit1NONE[6].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="1TOTSETS" name="1TOTSETS" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="2TOTSETS" name="2TOTSETS" type="number" value='@ViewBag.dataToEdit2NONE[6].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="2TOTSETS" name="2TOTSETS" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="3TOTSETS" name="3TOTSETS" type="number" value='@ViewBag.dataToEdit3NONE[6].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="3TOTSETS" name="3TOTSETS" type="number" value="" step="any" readonly>
+							}
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.BuffLev.FTranslation
+						<th class="text-center small" colspan="2">
+								@if ((ViewBag.dataToEdit1NONE.Count != 0))
+								{
+								<input class="form-control mr-sm-2" id="BUFFLEV1" name="BUFFLEV1" type="number" value='@ViewBag.dataToEdit1NONE[7].FRecordvalue' step="any">
+								}
+								else
+								{
+								<input class="form-control mr-sm-2" id="BUFFLEV1" name="BUFFLEV1" type="number" value="" step="any">
+								}
+						</th>
+
+						<th class="text-center small" colspan="2">
+								@if ((ViewBag.dataToEdit2NONE.Count != 0))
+								{
+								<input class="form-control mr-sm-2" id="BUFFLEV2" name="BUFFLEV2" type="number" value='@ViewBag.dataToEdit2NONE[7].FRecordvalue' step="any">
+								}
+								else
+								{
+								<input class="form-control mr-sm-2" id="BUFFLEV2" name="BUFFLEV2" type="number" value="" step="any">
+								}
+						</th>
+
+						<th class="text-center small" colspan="2">
+								@if ((ViewBag.dataToEdit3NONE.Count != 0))
+								{
+								<input class="form-control mr-sm-2" id="BUFFLEV3" name="BUFFLEV3" type="number" value='@ViewBag.dataToEdit3NONE[7].FRecordvalue' step="any">
+								}
+								else
+								{
+								<input class="form-control mr-sm-2" id="BUFFLEV3" name="BUFFLEV3" type="number" value="" step="any">
+								}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.TeamDiss.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMDISS1" name="TEAMDISS1" type="text" value='@ViewBag.dataToEdit1NONE[8].FRecordvalue.ToString()'>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMDISS1" name="TEAMDISS1" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMDISS2" name="TEAMDISS2" type="text" value='@ViewBag.dataToEdit2NONE[8].FRecordvalue.ToString()' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMDISS2" name="TEAMDISS2" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="TEAMDISS3" name="TEAMDISS3" type="text" value='@ViewBag.dataToEdit3NONE[8].FRecordvalue.ToString()' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="TEAMDISS3" name="TEAMDISS3" type="text" value="" step="any">
+							}
+						</th>
+					</tr>
+				
+					<tr>
+						<th class="text small">
+							@ViewBag.ShiftDurBreak.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SHIFTDUR1" name="SHIFTDUR1" type="text" value='@ViewBag.dataToEdit1NONE[9].FRecordvalue.ToString()' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SHIFTDUR1" name="SHIFTDUR1" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="BREAK1" name="BREAK1" type="text" value='@ViewBag.dataToEdit1NONE[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="BREAK1" name="BREAK1" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SHIFTDUR2" name="SHIFTDUR2" type="text" value='@ViewBag.dataToEdit2NONE[9].FRecordvalue.ToString()' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SHIFTDUR2" name="SHIFTDUR2" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="BREAK2" name="BREAK2" type="text" value='@ViewBag.dataToEdit2NONE[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="BREAK2" name="BREAK2" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="SHIFTDUR3" name="SHIFTDUR3" type="text" value='@ViewBag.dataToEdit3NONE[9].FRecordvalue.ToString()' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="SHIFTDUR3" name="SHIFTDUR3" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="BREAK3" name="BREAK3" type="text" value='@ViewBag.dataToEdit3NONE[10].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="BREAK3" name="BREAK3" type="text" value="" step="any">
+							}
+						</th>
+
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.CycleTimeTargActual.FTranslation
+						</th>
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="CYCLETARG1" name="CYCLETARG1" type="text" value='@ViewBag.dataToEdit1NONE[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="CYCLETARG1" name="CYCLETARG1" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ACTUAL1" name="ACTUAL1" type="number" value='@ViewBag.dataToEdit1NONE[13].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ACTUAL1" name="ACTUAL1" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="CYCLETARG2" name="CYCLETARG2" type="text" value='@ViewBag.dataToEdit2NONE[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="CYCLETARG2" name="CYCLETARG2" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ACTUAL2" name="ACTUAL2" type="number" value='@ViewBag.dataToEdit2NONE[13].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ACTUAL2" name="ACTUAL2" type="number" value="" step="any" readonly>
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="CYCLETARG3" name="CYCLETARG3" type="text" value='@ViewBag.dataToEdit3NONE[11].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="CYCLETARG3" name="CYCLETARG3" type="text" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ACTUAL3" name="ACTUAL3" type="number" value='@ViewBag.dataToEdit3NONE[13].FRecordvalue' step="any" readonly>
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ACTUAL3" name="ACTUAL3" type="number" value="" step="any" readonly>
+							}
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.ZQB.FTranslation
+						</th>
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit1NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ZQB1" name="ZQB1" type="number" value='@ViewBag.dataToEdit1NONE[12].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ZQB1" name="ZQB1" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit2NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ZQB2" name="ZQB2" type="number" value='@ViewBag.dataToEdit2NONE[12].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ZQB2" name="ZQB2" type="number" value="" step="any">
+							}
+						</th>
+
+						<th class="text-center small" colspan="2">
+							@if ((ViewBag.dataToEdit3NONE.Count != 0))
+							{
+								<input class="form-control mr-sm-2" id="ZQB3" name="ZQB3" type="number" value='@ViewBag.dataToEdit3NONE[12].FRecordvalue' step="any">
+							}
+							else
+							{
+								<input class="form-control mr-sm-2" id="ZQB3" name="ZQB3" type="number" value="" step="any">
+							}
+						</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<br />
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="form-group">
+					<input type="submit" value='@ViewBag.submit.FTranslation' class="btn btn-primary" />
+				</div>
+		</div>
+	</div>
+</form>
+
+
+
+
+

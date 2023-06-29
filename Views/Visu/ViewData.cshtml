@@ -1,0 +1,4699 @@
+﻿@{
+	ViewData["Title"] = "ViewData";
+}
+
+
+<div class="row justify-content-center">
+	<div class="col-6 column">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col col-lg-2">
+				</div>
+				<div class="col-md-auto">
+					<h2> @ViewBag.DateSelected </h2>
+					<br /><br />
+				</div>
+				<div class="col col-lg-2">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+	<div class="row">
+
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h2> @ViewBag.Prod40.FTranslation</h2>
+					</div>
+					<div class="col col-lg-2">
+				
+
+						@Html.ActionLink( (string) ViewBag.Edit.FTranslation , "EditReport40", new {DaySelected=ViewBag.DayChosen, MonthSelected = ViewBag.MonthChosen, YearSelected =ViewBag.YearChosen }, new { @class = "btn btn-outline-warning" })
+					</div>
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								@ViewBag.Shift.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								1
+							</th>
+							<th class="text-center small" colspan="2">
+								2
+							</th>
+							<th class="text-center small" colspan="2">
+								3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text small">
+								@ViewBag.SOLLProd.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA != null) || (ViewBag.data_40_Shift1_SectionA.Count != 0))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.ISTProd.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center col-lg-3 small">
+								@ViewBag.Sec.FTranslation
+							</th>
+							<th class="text-center small">
+								A
+							</th>
+							<th class="text-center small">
+								C
+							</th>
+							<th class="text-center small">
+								A
+							</th>
+							<th class="text-center small">
+								C
+							</th>
+							<th class="text-center small">
+								A
+							</th>
+							<th class="text-center small">
+								C
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text small">
+								@ViewBag.TL.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.PD.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.NewMA.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.SpeMeas.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.AS.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TrainerZNA.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.Vac.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.VacIND.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.Sick.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TempW.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.SumPerSec.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionA.Count != 0) || (ViewBag.data_40_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_SectionC.Count != 0) || (ViewBag.data_40_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionA.Count != 0) || (ViewBag.data_40_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_SectionC.Count != 0) || (ViewBag.data_40_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionA.Count != 0) || (ViewBag.data_40_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_SectionC.Count != 0) || (ViewBag.data_40_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+					</tbody>
+				</table>
+
+
+
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-4">
+								@ViewBag.Prod90.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								1
+							</th>
+							<th class="text-center small" colspan="2">
+								2
+							</th>
+							<th class="text-center small" colspan="2">
+								3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text small">
+								@ViewBag.ZNASecA.FTranslation
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 16)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 16)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 16)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.ZNASecC.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 17)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 17)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 17)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TotSets.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 24)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 24)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 24)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.BuffLev.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 20)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 20)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 20)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TeamDiss.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 18)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 18)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 18)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.ShiftDurBreak.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 21)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 22)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 21)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 22)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 21)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 22)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.CycleTimeTargActual.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 19)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 15)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 19)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 15)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 19)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 15)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.ZQB.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift1_Prod.Count != 0) || (ViewBag.data_40_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 29)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift2_Prod.Count != 0) || (ViewBag.data_40_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 29)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_40_Shift3_Prod.Count != 0) || (ViewBag.data_40_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_40_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 29)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+					</tbody>
+				</table>
+
+
+			</div>
+		</div>
+
+		<div class="col-lg-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h2> @ViewBag.Prod41.FTranslation</h2>
+					</div>
+					<div class="col col-lg-2">
+						@Html.ActionLink( (string) ViewBag.Edit.FTranslation , "EditReport41", new {DaySelected=ViewBag.DayChosen, MonthSelected = ViewBag.MonthChosen, YearSelected =ViewBag.YearChosen }, new { @class = "btn btn-outline-warning" })
+					</div>
+				</div>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-3">
+								@ViewBag.Shift.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								1
+							</th>
+							<th class="text-center small" colspan="2">
+								2
+							</th>
+							<th class="text-center small" colspan="2">
+								3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text small">
+								@ViewBag.SOLLProd.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA != null) || (ViewBag.data_41_Shift1_SectionA.Count != 0))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 1)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.ISTProd.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 2)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center col-lg-3 small">
+								@ViewBag.Sec.FTranslation
+							</th>
+							<th class="text-center small">
+								A
+							</th>
+							<th class="text-center small">
+								C
+							</th>
+							<th class="text-center small">
+								A
+							</th>
+							<th class="text-center small">
+								C
+							</th>
+							<th class="text-center small">
+								A
+							</th>
+							<th class="text-center small">
+								C
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text small">
+								@ViewBag.TL.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 3)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.PD.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 4)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.NewMA.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 13)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.SpeMeas.FTranslation*
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 5)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.AS.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 12)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TrainerZNA.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 6)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.Vac.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 9)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.VacIND.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 7)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.Sick.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 10)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TempW.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 11)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.SumPerSec.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionA.Count != 0) || (ViewBag.data_41_Shift1_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionA)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_SectionC.Count != 0) || (ViewBag.data_41_Shift1_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_SectionC)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionA.Count != 0) || (ViewBag.data_41_Shift2_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionA)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_SectionC.Count != 0) || (ViewBag.data_41_Shift2_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_SectionC)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionA.Count != 0) || (ViewBag.data_41_Shift3_SectionA != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionA)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_SectionC.Count != 0) || (ViewBag.data_41_Shift3_SectionC != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_SectionC)
+									{
+										@if (item.FRecordtypeid == 23)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center small col-lg-4">
+								@ViewBag.Prod90.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								1
+							</th>
+							<th class="text-center small" colspan="2">
+								2
+							</th>
+							<th class="text-center small" colspan="2">
+								3
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text small">
+								@ViewBag.ZNASecA.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 16)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 16)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 16)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.ZNASecC.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 17)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 17)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 17)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.SKD.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 31)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 31)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 31)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.Valmet.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 26)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 26)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 26)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.Sindel.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 30)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 30)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 30)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.Rastatt.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 32)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 32)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 32)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TotSets.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 24)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 24)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 24)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.BuffLev.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 20)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 20)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 20)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.TeamDiss.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 18)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 18)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 18)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.ShiftDurBreak.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 21)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 22)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 21)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 22)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 21)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 22)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+
+						<tr>
+							<th class="text small">
+								@ViewBag.CycleTimeTargActual.FTranslation
+							</th>
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 19)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 15)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 19)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 15)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 19)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 15)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+						<tr>
+							<th class="text small">
+								@ViewBag.ZQB.FTranslation
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift1_Prod.Count != 0) || (ViewBag.data_41_Shift1_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift1_Prod)
+									{
+										@if (item.FRecordtypeid == 29)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift2_Prod.Count != 0) || (ViewBag.data_41_Shift2_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift2_Prod)
+									{
+										@if (item.FRecordtypeid == 29)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+							<th class="text-center small" colspan="2">
+								@if ((ViewBag.data_41_Shift3_Prod.Count != 0) || (ViewBag.data_41_Shift3_Prod != null))
+								{
+									@foreach (var item in ViewBag.data_41_Shift3_Prod)
+									{
+										@if (item.FRecordtypeid == 29)
+										{
+											@item.FRecordvalue
+										}
+									}
+								}
+								else { }
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<br />
+
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h2>@ViewBag.ProdAMG.FTranslation</h2>
+					</div>
+					<div class="col col-lg-2">
+						@Html.ActionLink( (string) ViewBag.Edit.FTranslation , "EditReportAMG", new {DaySelected=ViewBag.DayChosen, MonthSelected = ViewBag.MonthChosen, YearSelected =ViewBag.YearChosen }, new { @class = "btn btn-outline-warning" })
+					</div>
+				</div>
+			</div>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-4">
+							@ViewBag.Shift.FTranslation
+						</th>
+						<th class="text-center small">
+							1
+						</th>
+						<th class="text-center small">
+							2
+						</th>
+						<th class="text-center small">
+							3
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text small">
+							@ViewBag.SOLLGes.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 1)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 1)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 1)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.ISTGes.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 2)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 2)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 2)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.TL.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 3)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 3)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 3)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.PD.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 4)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 4)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 4)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.NewMA.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 13)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 13)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 13)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.SpeMeas.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 5)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 5)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 5)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.AS.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 12)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 12)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 12)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.TrainerZNA.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 6)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 6)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 6)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.Vac.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 9)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 9)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 9)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.VacIND.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 7)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 7)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 7)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.Sick.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 10)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 10)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 10)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.TempW.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 11)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 11)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 11)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.SumProd.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 23)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 23)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 23)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-4">
+							@ViewBag.Prod90.FTranslation
+						</th>
+						<th class="text-center small">
+							1
+						</th>
+						<th class="text-center small">
+							2
+						</th>
+						<th class="text-center small">
+							3
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text small">
+							@ViewBag.ZNASecA.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 16)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 16)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 16)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.TotSets.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 24)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 24)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 24)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.RA41.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 25)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 25)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 25)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							@ViewBag.Valmet.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 26)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 26)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 26)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.Kecs.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 27)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 27)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 27)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.RA40.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 28)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 28)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 28)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.CycleTimeTarg.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 19)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 19)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 19)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.CycleTimeActual.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 15)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 15)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 15)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.TeamDiss.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 18)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 18)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 18)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.ShiftDur.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 21)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 21)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 21)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.Break.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 22)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 22)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 22)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							@ViewBag.ZQB.FTranslation
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift1.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift1)
+								{
+									@if (item.FRecordtypeid == 29)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift2.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift2)
+								{
+									@if (item.FRecordtypeid == 29)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+						<th class="text-center small">
+							@if (ViewBag.data_AMG_Shift3.Count != 0)
+							{
+								@foreach (var item in ViewBag.data_AMG_Shift3)
+								{
+									@if (item.FRecordtypeid == 29)
+									{
+										@item.FRecordvalue
+									}
+								}
+							}
+							else { }
+						</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

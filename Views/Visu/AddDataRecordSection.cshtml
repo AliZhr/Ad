@@ -1,0 +1,202 @@
+﻿@model Adient_DashBoard.Models.TDatarecord
+
+@{
+	ViewData["Title"] = "AddDataRecord";
+}
+<h1>Fill this form</h1>
+
+
+<span class="text-black-50">
+	Report's date : @ViewBag.DateSelected
+</span>
+<partial name="_AddDataRecordPartial" />
+
+<br />
+<br />
+<form asp-action="AddDataRecordSectionPost">
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h2> Production @ViewBag.ProductionSelected.FField </h2>
+					</div>
+					<div class="col col-lg-2">
+					</div>
+				</div>
+			</div>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-4">
+							#
+						</th>
+						<th class="text-center small">
+							@ViewBag.LayerSelected.FField | Section A
+						</th>
+						<th class="text-center small">
+							@ViewBag.LayerSelected.FField | Section C
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				<th class="text small">
+					Teamleader
+				</th>
+
+				<th class="text small">
+					<input class="form-control mr-sm-2" id="Ateamleader" name="Ateamleader" type="number" step="any" placeholder="Number of teamleaders" required>
+				</th>
+
+				<th class="text small">
+					<input class="form-control mr-sm-2" id="Cteamleader" name="Cteamleader" type="number" step="any" placeholder="Number of teamleaders" required>
+				</th>
+
+				</tr>
+
+				<tr>
+					<th class="text small">
+						Present direct
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Apresentdirectly" name="Apresentdirectly" type="number" step="any" placeholder="Present directly" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Cpresentdirectly" name="Cpresentdirectly" type="number" step="any" placeholder="Present directly" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Neue MA im Training
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Anewmaintraining" name="Anewmaintraining" type="number" step="any" placeholder="Neue MA im Training" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Cnewmaintraining" name="Cnewmaintraining" type="number" step="any" placeholder="Neue MA im Training" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Sondermaßnahmen*
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Aspecialmeasures" name="Aspecialmeasures" type="number" step="any" placeholder="Special measures" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Cspecialmeasures" name="Cspecialmeasures" type="number" step="any" placeholder="Special measures" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Andon + Springer
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Aandonandspringer" name="Aandonandspringer" type="number" step="any" placeholder="Andon and springer" required>
+					</th>
+					
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Candonandspringer" name="Candonandspringer" type="number" step="any" placeholder="Andon and springer" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Trainer / ZNA
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Atrainerzna" name="Atrainerzna" type="number" step="any" placeholder="Trainer / ZNA" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Ctrainerzna" name="Ctrainerzna" type="number" step="any" placeholder="Trainer / ZNA" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Vacacation
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Avacation" name="Avacation" type="number" step="any" placeholder="Vacation" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Cvacation" name="Cvacation" type="number" step="any" placeholder="Vacation" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Vacacation indirect
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Avacationindirect" name="Avacationindirect" type="number" step="any" placeholder="Trainer Indirect" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Cvacationindirect" name="Cvacationindirect" type="number" step="any" placeholder="Trainer Indirect" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Sick
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Asick" name="Asick" type="number" step="any" placeholder="Sick" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Csick" name="Csick" type="number" step="any" placeholder="Sick" required>
+					</th>
+
+				</tr>
+				<tr>
+					<th class="text small">
+						Temporary Workers
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Atemporaryworkers" name="Atemporaryworkers" type="number" step="any" placeholder="Temporary Workers" required>
+					</th>
+
+					<th class="text small">
+						<input class="form-control mr-sm-2" id="Ctemporaryworkers" name="Ctemporaryworkers" type="number" step="any" placeholder="Temporary Workers" required>
+					</th>
+
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<br />
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="form-group">
+				<input type="submit" value="Submit" class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+
+</form>
+
+
+

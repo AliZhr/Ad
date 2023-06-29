@@ -1,0 +1,111 @@
+﻿@{
+	ViewData["Title"] = "ListeTagesreportDay";
+}
+
+	<h1>@ViewBag.headcount_prod.FTranslation: @ViewBag.CurrentMonth @ViewBag.CurrentYear </h1>
+
+
+
+	<br />
+	<br />
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+	
+
+	<div class="row">
+		<div class="col-sm-6">
+
+
+			<div id="accordion">
+				<div class="card border-info">
+					<div class="card-header" id="headingOne">
+						<h5>
+							<button class="btn btn-outline-info collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+
+								<img src="~/047add1_99902.ico" alt="" width="24" height="24" />
+								<strong> @ViewBag.addreport.FTranslation</strong>
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body text-dark">
+							<form asp-action="AddConfig">
+								<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+								<div class="form-group">
+									<label for="ReportDate" class="control-label">@ViewBag.reportdate.FTranslation:</label>
+									<input for="ReportDate" name="ReportDate" id="ReportDate" class="form-control" type="date" placeholder="" required />
+								</div>
+								<div class="form-group">
+									<input type="submit" value='@ViewBag.addbutton.FTranslation' class="btn btn-primary" />
+								</div>
+								@Html.ActionLink((string) ViewBag.cancelbutton.FTranslation, "ListeTagesreport", new { }, new { @class = "btn btn-outline-danger" })
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+		<br />
+
+
+
+
+
+
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>
+					@ViewBag.reportdate.FTranslation
+				</th>
+				<th>
+
+				</th>
+				<th>
+					@ViewBag.action.FTranslation
+				</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in ViewBag.Days)
+			{
+				<tr>
+					<td>
+						@item / @ViewBag.CurrentMonthNum / @ViewBag.CurrentYear
+					</td>
+					<th>
+
+					</th>
+					<td>
+						@Html.ActionLink((string) ViewBag.view.FTranslation, "ViewData", new {DaySelected=item, MonthSelected = ViewBag.CurrentMonthNum, YearSelected = ViewBag.CurrentYear }, new { @class = "btn btn-info" })
+						@Html.ActionLink((string) ViewBag.delete.FTranslation, "DeleteReport", new {DaySelected=item, MonthSelected = ViewBag.CurrentMonthNum, YearSelected = ViewBag.CurrentYear }, new { @class = "btn btn-warning disabled" })
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<br />
+
+	<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+

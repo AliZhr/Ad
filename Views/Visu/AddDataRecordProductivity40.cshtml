@@ -1,0 +1,145 @@
+﻿@{
+	ViewData["Title"] = "AddDataRecordProductivity";
+}
+
+<h1>Fill this form</h1>
+
+
+<span class="text-black-50">
+	Report's date : @ViewBag.DateSelected
+</span>
+<partial name="_AddDataRecordPartial" />
+
+<br />
+<br />
+<form asp-action="AddDataRecordProductivity40Post">
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+					</div>
+					<div class="col-md-auto">
+						<h2> Production @ViewBag.ProductionSelected.FField </h2>
+					</div>
+					<div class="col col-lg-2">
+					</div>
+				</div>
+			</div>
+
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center small col-lg-4">
+							Productivity (90%) in
+						</th>
+						<th class="text-center small">
+							@ViewBag.LayerSelected.FField
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text small">
+							ZNA section A
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="znasectiona" name="znasectiona" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							ZNA section C
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="znasectionc" name="znasectionc" type="number" step="any" placeholder=""  required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Total sets built
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="totalsetsbuilt" name="totalsetsbuilt" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>				
+					<tr>
+						<th class="text small">
+							Buffer level at the end of the shift
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="bufflevel" name="bufflevel" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							Team discussion, 5S measures
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="teamdiss5smeas" name="teamdiss5smeas" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr>
+						<th class="text-center col-lg-4 small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+						<th class="text-center small">
+
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="text small">
+							Shift duration [h] / break [min]
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="shiftduration" name="shiftduration" type="number" step="any" placeholder="" required>
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="break1" name="break1" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+
+					<tr>
+						<th class="text small">
+							Cycle time TARGET [s] / ACTUAL [s]
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="cycletimetarget" name="cycletimetarget" type="number" step="any" placeholder="" required>
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="actual" name="actual" type="number" step="any" placeholder=""readonly>
+						</th>
+					</tr>
+					<tr>
+						<th class="text small">
+							ZQB
+						</th>
+						<th class="text small">
+							<input class="form-control mr-sm-2" id="zqb" name="zqb" type="number" step="any" placeholder="" required>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<br />
+	<div class="row justify-content-center">
+		<div class="col-6 column">
+			<div class="form-group">
+				<input type="submit" value="Submit" class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+</form>
